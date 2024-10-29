@@ -35,7 +35,7 @@ plot(FFRconcrete_model)
 #In this simple model, there is one input node for each of the eight features,
 #followed by a single hidden node
 #and a single output node that predicts the concrete strength.Lower errors means better prediction
-model_results = compute(concrete_model,concrete_test[1:8])
+model_results = compute(FFRconcrete_model,concrete_test[1:8])
 #It returns a list with two components: $neurons, which stores the
 #neurons for each layer in the network, and
 #$net.result, which stores the predicted values.
@@ -49,3 +49,4 @@ plot(concrete_model2)
 model_results2 <- compute(concrete_model2, concrete_test[1:8])
 predicted_strength2 <- model_results2$net.result
 cor(predicted_strength2, concrete_test$strength)
+
